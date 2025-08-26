@@ -1,12 +1,11 @@
 # Create Action Lab
 
 1. Build a working `create` action
-2. Use a `form_tag` to create a new form that submits to the `index` action
+2. Use a `form_with` to create a new form that submits to the `index` action
 3. Correctly name form fields so that they end up at the top level of the `params` hash
 4. Assign data from `params` to a `Student` object in the `create` action
 5. Save that `Student` object in the `create` action
 6. Create a `redirect_to` from the `create` action to the `show` action
-
 
 ## Instructions
 
@@ -24,12 +23,10 @@ When this lab is complete, your application should have the following behavior:
 
 3. After the user submits the form, they are redirected to the `show` page that renders the `Student` record that they created
 
-
-Make sure to use a route helper method to redirect to the `show` page at the end of the `create` method. You can find the correct syntax for this route by running `rake routes` in the terminal.
-
+Make sure to use a route helper method to redirect to the `show` page at the end of the `create` method. You can find the correct syntax for this route by running `bin/rails routes` in the terminal.
 
 ## Resources
 
 * [Reading](https://github.com/learn-co-curriculum/rails-create-action-readme)
 
-* [Documentation](http://api.rubyonrails.org/classes/ActiveRecord/Persistence/ClassMethods.html)
+* [Documentation](https://api.rubyonrails.org/v7.1.0/classes/ActiveRecord/Persistence/ClassMethods.html)

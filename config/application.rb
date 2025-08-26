@@ -1,21 +1,22 @@
 require_relative 'boot'
 
-require 'logger'
-require 'ostruct'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Arlab
+module BlogFlash
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 7.1
 
     # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+    config.action_controller.permit_all_parameters = true
+
+    # Set cache format version for Rails 7.1
+    config.active_support.cache_format_version = 7.1
   end
 end
